@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_graph.xml"
+    app:startDestination="@id/authInitFragment">
+
+    <fragment
+        android:id="@+id/authInitFragment"
+        android:name="com.atria.software.dating.AuthInitFragment"
+        android:label="fragment_auth_init"
+        tools:layout="@layout/fragment_auth_init" >
+        <action
+            android:id="@+id/action_authInitFragment_to_authModeFragment"
+            app:destination="@id/authModeFragment" />
+        <action
+            android:id="@+id/action_authInitFragment_to_authLoginFragment"
+            app:destination="@id/authLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authModeFragment"
+        android:name="com.atria.software.dating.AuthModeFragment"
+        android:label="fragment_auth_mode"
+        tools:layout="@layout/fragment_auth_mode" />
+    <fragment
+        android:id="@+id/authLoginFragment"
+        android:name="com.atria.software.dating.AuthLoginFragment"
+        android:label="fragment_auth_login"
+        tools:layout="@layout/fragment_auth_login" />
+</navigation>
