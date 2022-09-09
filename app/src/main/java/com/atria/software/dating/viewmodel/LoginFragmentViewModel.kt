@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import com.atria.software.dating.R
+import com.facebook.CallbackManager
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -83,6 +84,11 @@ class LoginFragmentViewModel(
                     onVerificationSend(false)
                 }
             }
+    }
+
+    fun loginWithFacebook(){
+        val callbackManager = CallbackManager.Factory.create();
+
     }
 
 
