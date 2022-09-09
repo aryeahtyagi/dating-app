@@ -83,7 +83,7 @@ class AuthLoginFragment : Fragment() {
         Firebase.auth.signInWithCredential(credential)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    this.parentFragment?.parentFragment?.findNavController()?.navigate(R.id.action_startFragment_to_profileFragment)
+                    this.parentFragment?.parentFragment?.findNavController()?.navigate(R.id.action_startFragment_to_setprofile_graph)
                     Toast.makeText(context, "SUCCESS SIGN IN", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(context, "Something went wrong 60", Toast.LENGTH_SHORT).show()

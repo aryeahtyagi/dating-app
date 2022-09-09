@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setprofile_graph"
+    app:startDestination="@id/name">
+    <fragment
+        android:id="@+id/name"
+        android:name="com.atria.software.dating.name"
+        android:label="fragment_name"
+        tools:layout="@layout/fragment_name" >
+        <action
+            android:id="@+id/action_name_to_gender"
+            app:destination="@id/gender" />
+    </fragment>
+    <fragment
+        android:id="@+id/gender"
+        android:name="com.atria.software.dating.gender"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" >
+        <action
+            android:id="@+id/action_gender_to_datepref"
+            app:destination="@id/datepref" />
+    </fragment>
+    <fragment
+        android:id="@+id/datepref"
+        android:name="com.atria.software.dating.datepref"
+        android:label="fragment_datepref"
+        tools:layout="@layout/fragment_datepref" >
+        <action
+            android:id="@+id/action_datepref_to_enterBio"
+            app:destination="@id/enterBio" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterBio"
+        android:name="com.atria.software.dating.enterBio"
+        android:label="fragment_enter_bio"
+        tools:layout="@layout/fragment_enter_bio" >
+        <action
+            android:id="@+id/action_enterBio_to_hobbies"
+            app:destination="@id/hobbies" />
+    </fragment>
+    <fragment
+        android:id="@+id/hobbies"
+        android:name="com.atria.software.dating.hobbies"
+        android:label="fragment_hobbies"
+        tools:layout="@layout/fragment_hobbies" />
+</navigation>

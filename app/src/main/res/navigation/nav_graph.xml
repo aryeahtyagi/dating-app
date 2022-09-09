@@ -11,8 +11,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_loginFragment_to_setprofile_graph"
+            app:destination="@id/setprofile_graph" />
     </fragment>
     <fragment
         android:id="@+id/startFragment"
@@ -23,27 +23,20 @@
             android:id="@+id/action_startFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_startFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-        <action
             android:id="@+id/action_startFragment_to_loginBackFragment"
             app:destination="@id/loginBackFragment" />
         <action
-            android:id="@+id/action_startFragment_to_profileFragment2"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_startFragment_to_setprofile_graph"
+            app:destination="@id/setprofile_graph" />
     </fragment>
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.atria.software.dating.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/loginBackFragment"
         android:name="com.atria.software.dating.LoginBackFragment"
         android:label="fragment_login_back"
         tools:layout="@layout/fragment_login_back" >
         <action
-            android:id="@+id/action_loginBackFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_loginBackFragment_to_setprofile_graph2"
+            app:destination="@id/setprofile_graph" />
     </fragment>
+    <include app:graph="@navigation/setprofile_graph" />
 </navigation>

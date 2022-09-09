@@ -62,7 +62,7 @@ class LoginBackFragment : Fragment() {
                     loginFragmentViewModel.signInUser(emailEditText.text.toString(), passwordText.text.toString()){
                         if(it){
                             // we will navigate to confirm email
-                            findNavController().navigate(R.id.action_loginBackFragment_to_profileFragment)
+                            findNavController().navigate(R.id.action_loginBackFragment_to_setprofile_graph2)
                         }else{
                             Log.i(TAG, "onViewCreated: FAILED")
 

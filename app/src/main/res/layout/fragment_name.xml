@@ -2,19 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout5"
+    android:id="@+id/frameLayout7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgggg"
-    tools:context=".LoginBackFragment">
-
+    tools:context=".name"
+    android:background="@drawable/bgggg">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewEntername"
+        android:layout_width="match_parent"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="20dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Welcome"
+        android:text="What's your name?"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,23 +23,23 @@
         app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.138" />
+        app:layout_constraintVertical_bias="0.138"
+        />
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/nameText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Let’s get you in"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="524dp"
+        android:background="@drawable/boxesforinput"
+        android:hint="Name"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="14dp"
+        android:textColor="#6A6262"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEntername"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/textViewEntername" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -46,57 +47,25 @@
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:src="@drawable/ic_backbtn"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEntername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.394" />
 
-    <EditText
-        android:id="@+id/emailEditText"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/bg_email"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:paddingHorizontal="14dp"
-        android:textColor="#6A6262"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.005" />
-
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:background="@drawable/bg_email"
-        android:inputType="textPassword"
-        android:paddingHorizontal="14dp"
-        android:hint="Password"
-        android:textColor="#6A6262"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
-        app:layout_constraintVertical_bias="0.034" />
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_marginEnd="20dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
-        app:layout_constraintVertical_bias="0.907">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameText"
+        app:layout_constraintTop_toBottomOf="@+id/nameText"
+        app:layout_constraintVertical_bias="0.933">
 
         <ImageView
             android:id="@+id/imageView"
@@ -112,10 +81,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:textSize="13sp"
             android:fontFamily="@font/poppins_medium"
             android:text="We never share this and it wont be \n displayed on your profile"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="13sp" />
 
         <ImageButton
             android:id="@+id/proceedButton"
@@ -125,5 +94,6 @@
             android:background="#00FFFFFF"
             android:src="@drawable/ic_okaybutton" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

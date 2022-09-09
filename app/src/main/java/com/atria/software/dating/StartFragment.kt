@@ -36,7 +36,7 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if(mAuth.currentUser!=null){
-            findNavController().navigate(R.id.action_startFragment_to_profileFragment)
+            findNavController().navigate(R.id.action_startFragment_to_setprofile_graph)
         }
         val viewpager = view.findViewById<ViewPager2>(R.id.viewpager)
         val dotView = view.findViewById<ImageView>(R.id.dotView)
